@@ -1,5 +1,5 @@
 \documentclass[12pt,a4paper]{article}
-\pagenumbering{gobble} % Turn off page numbering
+%\pagenumbering{gobble} % Turn off page numbering
 
 % Language setting
 % Replace `english' with e.g. `spanish' to change the document language
@@ -7,17 +7,34 @@
 
 % Set page size and margins
 % Replace `letterpaper' with `a4paper' for UK/EU standard size
-\usepackage[letterpaper,top=1.5cm,bottom=1.5cm,left=1.5cm,right=1.5cm,marginparwidth=1.75cm]{geometry}
+\usepackage[letterpaper,top=1.5cm,bottom=2cm,left=1.5cm,right=1.5cm,marginparwidth=1.75cm]{geometry}
 
 \usepackage{xcolor}
 \pagecolor{black} % sets the background color of the page
 \color{white} % sets the text color of the document
 
 % Useful packages
+\usepackage{array}
+\usepackage[en-GB]{datetime2}
+%\DTMlangsetup[en-GB]{ord=raise}
+
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
+%To get the page number to appear at the bottom right of each page
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \fancyhf{}
+    \fancyfoot[R]{page \thepage}
+    %\fancyhead[R]{page \thepage}    
+    %\fancyfoot[L]{EbookCafe.com}
+
+    \renewcommand{\headruleskip}{0mm}
+    \renewcommand{\footruleskip}{0pt}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+%To get the page number to appear at the bottom right of each page
 
 
 \setlength{\parindent}{0pt}
@@ -27,59 +44,87 @@
 \begin{titlepage}
     \begin{center}
     
-    \includegraphics{example-image-duck} 
-        \vspace*{1cm}
+    \includegraphics[height=5cm]{aust_logo2.png} 
+        \vspace*{5mm}
         
         \textbf {\LARGE	Ahsanullah University of Science and Technology} % MAIN TITLE
-        \vspace{5mm}
+        \vspace{2mm}
         
         \textit{{\large Department of Computer Science and Engineering}} % SUBTITLE
-        \vspace{1cm}
+        \vspace{7mm}
 
         {\large	CSE 3200: Software Development-V}
-        \vspace{7mm}
+        \vspace{5mm}
         
         {\large Fall 2021}
 
-        \vspace{1cm}
+        \vspace{7mm}
         {\large Project Final Report}
-        \vspace{1cm}
+        \vspace{5mm}
         
         \noindent\makebox[\linewidth]{\rule{\textwidth}{2pt}} 
-        \vspace{1cm}
+        \vspace{7mm}
         
         {\LARGE EbookCafe.com}
-        \vspace{1cm}
+        \vspace{7mm}
         
         \noindent\makebox[\linewidth]{\rule{\textwidth}{2pt}} 
+        \vspace{3mm}
+
+        {\large \textbf{Lab Group:} B1}
+
+        {\large \textbf{Project Group:} 09}
         \vspace{1cm}
-        
-        {\Large John Doe }  % AUTHOR
-        
-        {\Large something}
-        \vspace{1cm}
+
         
         
-         
-    \vspace{0.2cm}
+        {\Large Submitted By }
+        \vspace{2mm}
         
-        Department of Statistical Sciences\\
-        University of Cape Town\\
-        South Africa\\
-        \today
+            %{\large & Janak Mallik      19 02 04 106} \\
+            %{\large & Aninda Mazumder   19 02 04 100} \\
+\large{   
+\begin{tabular}{c c} %table
+\setlength{\tabcolsep}{5mm}
+  Janak Mallik & 19 02 04 106 \\
+  Aninda Mazumder & 19 02 04 100
+\end{tabular}}
+\vspace{1cm}
+        
+{\large \today} 
+
         
     \end{center}
 \end{titlepage}
 \clearpage
 }
 
+%\renewcommand{\contentsname}{Table of Contents}
+\usepackage{comment} % load the comment package
+\begin{comment}
+\renewcommand{\contentsname}{Table of Contents}
+not working
+because of this 
+\usepackage[english]{babel}
+\usepackage{comment} % load the comment package
+insted use this
+\addto\captionsenglish{\renewcommand{\contentsname}{Table of Contents}}
+\end{comment}
+\addto\captionsenglish{\renewcommand{\contentsname}{Table of Contents}}
 \begin{document}
-\pagebreak
 \tableofcontents
-\pagebreak
+\newpage
 
-\clearpage
-\pagenumbering{arabic}
+%page number starts from here
+%\clearpage
+%\pagenumbering{arabic}
+
+
+
+
+
+
+
 \section{Introduction}
 \subsection{Introduction}
 Our project aims to create an online store that provides customers with the option to purchase both physical books and e-books. The goal is to offer a convenient and accessible platform for customers to browse and purchase their desired books in either format. This will help eliminate the need for customers to visit multiple stores or websites to find the books they want, and streamline the purchasing process by offering both formats in one place named “EbookCafe.com”.
@@ -175,4 +220,9 @@ Some possible future work for an online book store could include:
 By providing customers with the option to purchase e-books, we hope to encourage the adoption of digital formats, which can contribute to a more sustainable future by reducing the consumption of paper and the carbon footprint associated with shipping physical books. However, we also recognize that many customers still prefer physical books and we aim to provide them with the option to purchase those as well.
 
 Overall, our online store project aims to provide a comprehensive and convenient solution for customers looking to purchase books in either physical or digital formats, while also contributing to a more sustainable future.
+
+\vspace{2cm}
+latex file link for this document - \href{https://github.com/janakmallik/learn-latex/blob/main/ebookcafe.tex}{https://github.com/janakmallik/learn-latex/blob/main/ebookcafe.tex}
+
 \end{document}
+
