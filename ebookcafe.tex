@@ -1,4 +1,6 @@
 \documentclass[12pt,a4paper]{article}
+\pagenumbering{gobble} % Turn off page numbering
+
 % Language setting
 % Replace `english' with e.g. `spanish' to change the document language
 \usepackage[english]{babel}
@@ -7,28 +9,77 @@
 % Replace `letterpaper' with `a4paper' for UK/EU standard size
 \usepackage[letterpaper,top=1.5cm,bottom=1.5cm,left=1.5cm,right=1.5cm,marginparwidth=1.75cm]{geometry}
 
-
+\usepackage{xcolor}
+\pagecolor{black} % sets the background color of the page
+\color{white} % sets the text color of the document
 
 % Useful packages
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
-\title{Your Paper}
-\author{You}
+
 
 \setlength{\parindent}{0pt}
 
+\AtBeginDocument{
+
+\begin{titlepage}
+    \begin{center}
+    
+    \includegraphics{example-image-duck} 
+        \vspace*{1cm}
+        
+        \textbf {\LARGE	Ahsanullah University of Science and Technology} % MAIN TITLE
+        \vspace{5mm}
+        
+        \textit{{\large Department of Computer Science and Engineering}} % SUBTITLE
+        \vspace{1cm}
+
+        {\large	CSE 3200: Software Development-V}
+        \vspace{7mm}
+        
+        {\large Fall 2021}
+
+        \vspace{1cm}
+        {\large Project Final Report}
+        \vspace{1cm}
+        
+        \noindent\makebox[\linewidth]{\rule{\textwidth}{2pt}} 
+        \vspace{1cm}
+        
+        {\LARGE EbookCafe.com}
+        \vspace{1cm}
+        
+        \noindent\makebox[\linewidth]{\rule{\textwidth}{2pt}} 
+        \vspace{1cm}
+        
+        {\Large John Doe }  % AUTHOR
+        
+        {\Large something}
+        \vspace{1cm}
+        
+        
+         
+    \vspace{0.2cm}
+        
+        Department of Statistical Sciences\\
+        University of Cape Town\\
+        South Africa\\
+        \today
+        
+    \end{center}
+\end{titlepage}
+\clearpage
+}
+
 \begin{document}
-
-\maketitle
-
-\begin{abstract}
-Your abstract.
-\end{abstract}
-
+\pagebreak
 \tableofcontents
 \pagebreak
+
+\clearpage
+\pagenumbering{arabic}
 \section{Introduction}
 \subsection{Introduction}
 Our project aims to create an online store that provides customers with the option to purchase both physical books and e-books. The goal is to offer a convenient and accessible platform for customers to browse and purchase their desired books in either format. This will help eliminate the need for customers to visit multiple stores or websites to find the books they want, and streamline the purchasing process by offering both formats in one place named “EbookCafe.com”.
@@ -56,130 +107,72 @@ Thought we have proposed to add e-book facility. Due to lack of time and resourc
 
 {\large\textbf{Features for customers}}
 \begin{description}
-    \item[- Search and Browse :] Customers can easily search for and browse through books by genre, author, title, and more. This feature helps customers quickly find the books they are interested in and discover new titles.
-    \item[- Reviews and Ratings :] Reviews and ratings from other customers can help customers make informed decisions about their purchases. This feature also encourages customers to leave feedback, which can be valuable for the online book store to improve its offerings.
-    \item[- Wish Lists :] Customers can create wish lists of books they want to purchase in the future. This feature helps customers keep track of their desired books and makes future purchases more comfortable.
-    \item[- Quick and Easy Checkout :] A streamlined and efficient checkout process is crucial to ensure customer satisfaction. Customers can choose their preferred payment method, review their order details, and confirm their purchase in a few easy steps.
-    \item[- Add to Cart :] When a customer clicks the "Add to Cart" button, the selected item is added to their cart, which is displayed on the website. The customer can continue browsing the online book store and add more items to their cart.
+    \item[\hspace{7mm}- Search and Browse :] Customers can easily search for and browse through books by genre, author, title, and more. This feature helps customers quickly find the books they are interested in and discover new titles.
+    \item[\hspace{7mm}- Reviews and Ratings :] Reviews and ratings from other customers can help customers make informed decisions about their purchases. This feature also encourages customers to leave feedback, which can be valuable for the online book store to improve its offerings.
+    \item[\hspace{7mm}- Wish Lists :] Customers can create wish lists of books they want to purchase in the future. This feature helps customers keep track of their desired books and makes future purchases more comfortable.
+    \item[\hspace{7mm}- Quick and Easy Checkout :] A streamlined and efficient checkout process is crucial to ensure customer satisfaction. Customers can choose their preferred payment method, review their order details, and confirm their purchase in a few easy steps.
+    \item[\hspace{7mm}- Add to Cart :] When a customer clicks the "Add to Cart" button, the selected item is added to their cart, which is displayed on the website. The customer can continue browsing the online book store and add more items to their cart.
 \end{description}
 
 \vspace{5mm}
 {\large\textbf{Features for Admin}}
 \begin{description}
-    \item[- Product Management :] The admin have the ability to manage the product catalog, add new books, update existing books, and delete books from the inventory.
-    \item[- Author management :] The admin have the ability to manage author profiles that include information about the author.
-    \item[- Order Management :] The admin able to view and manage all orders placed by customers, including processing payments, updating order status, and managing refunds and returns.
-    \item[- Customer Management :] The admin able to manage customer accounts, view customer orders, and access customer information, including contact details and purchase history.
+    \item[\hspace{7mm}- Product Management :] The admin have the ability to manage the product catalog, add new books, update existing books, and delete books from the inventory.
+    \item[\hspace{7mm}- Author management :] The admin have the ability to manage author profiles that include information about the author.
+    \item[\hspace{7mm}- Order Management :] The admin able to view and manage all orders placed by customers, including processing payments, updating order status, and managing refunds and returns.
+    \item[\hspace{7mm}- Customer Management :] The admin able to manage customer accounts, view customer orders, and access customer information, including contact details and purchase history.
 \end{description}
 \subsection{Unimplemented Features}
 {\large\textbf{Features for Customers}}
 \begin{description}
-    \item[- E-book version :] Our book store should have offer e-books in different formats, such as PDF, EPUB, and MOBI, to ensure compatibility with different e-readers and devices.
+    \item[\hspace{7mm}- E-book version :] Our book store should have offer e-books in different formats, such as PDF, EPUB, and MOBI, to ensure compatibility with different e-readers and devices.
 \end{description}
-\section{--------}
-\subsection{How to create Sections and Subsections}
-
-Simply use the section and subsection commands, as in this example document! With Overleaf, all the formatting and numbering is handled automatically according to the template you've chosen. If you're using Rich Text mode, you can also create new section and subsections via the buttons in the editor toolbar.
-
-\subsection{How to include Figures}
-
-First you have to upload the image file from your computer using the upload link in the file-tree menu. Then use the include graphics command to include it in your document. Use the figure environment and the caption command to add a number and a caption to your figure. See the code for Figure \ref{fig:frog} in this section for an example.
-
-Note that your figure will automatically be placed in the most appropriate place for it, given the surrounding text and taking into account other figures or tables that may be close by. You can find out more about adding images to your documents in this help article on \href{https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf}{including images on Overleaf}.
-
-\begin{figure}
-\centering
-\includegraphics[width=0.3\textwidth]{frog.jpg}
-\caption{\label{fig:frog}This frog was uploaded via the file-tree menu.}
-\end{figure}
-
-\subsection{How to add Tables}
-
-Use the table and tabular environments for basic tables --- see Table~\ref{tab:widgets}, for example. For more information, please see this help article on \href{https://www.overleaf.com/learn/latex/tables}{tables}. 
-
-\begin{table}
-\centering
-\begin{tabular}{l|r}
-Item & Quantity \\\hline
-Widgets & 42 \\
-Gadgets & 13
-\end{tabular}
-\caption{\label{tab:widgets}An example table.}
-\end{table}
-
-\subsection{How to add Comments and Track Changes}
-
-Comments can be added to your project by highlighting some text and clicking ``Add comment'' in the top right of the editor pane. To view existing comments, click on the Review menu in the toolbar above. To reply to a comment, click on the Reply button in the lower right corner of the comment. You can close the Review pane by clicking its name on the toolbar when you're done reviewing for the time being.
-
-Track changes are available on all our \href{https://www.overleaf.com/user/subscription/plans}{premium plans}, and can be toggled on or off using the option at the top of the Review pane. Track changes allow you to keep track of every change made to the document, along with the person making the change. 
-
-\subsection{How to add Lists}
-
-You can make lists with automatic numbering \dots
-
-\begin{enumerate}
-\item Like this,
-\item and like this.
-\end{enumerate}
-\dots or bullet points \dots
-\begin{itemize}
-\item Like this,
-\item and like this.
-\end{itemize}
-
-\subsection{How to write Mathematics}
-
-\LaTeX{} is great at typesetting mathematics. Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
-\[S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
-      = \frac{1}{n}\sum_{i}^{n} X_i\]
-denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
-
-
-\subsection{How to change the margins and paper size}
-
-Usually the template you're using will have the page margins and paper size set correctly for that use-case. For example, if you're using a journal article template provided by the journal publisher, that template will be formatted according to their requirements. In these cases, it's best not to alter the margins directly.
-
-If however you're using a more general template, such as this one, and would like to alter the margins, a common way to do so is via the geometry package. You can find the geometry package loaded in the preamble at the top of this example file, and if you'd like to learn more about how to adjust the settings, please visit this help article on \href{https://www.overleaf.com/learn/latex/page_size_and_margins}{page size and margins}.
-
-\subsection{How to change the document language and spell check settings}
-
-Overleaf supports many different languages, including multiple different languages within one document. 
-
-To configure the document language, simply edit the option provided to the babel package in the preamble at the top of this example project. To learn more about the different options, please visit this help article on \href{https://www.overleaf.com/learn/latex/International_language_support}{international language support}.
-
-To change the spell check language, simply open the Overleaf menu at the top left of the editor window, scroll down to the spell check setting, and adjust accordingly.
-
-\subsection{How to add Citations and a References List}
-
-You can simply upload a \verb|.bib| file containing your BibTeX entries, created with a tool such as JabRef. You can then cite entries from it, like this: \cite{greenwade93}. Just remember to specify a bibliography style, as well as the filename of the \verb|.bib|. You can find a \href{https://www.overleaf.com/help/97-how-to-include-a-bibliography-using-bibtex}{video tutorial here} to learn more about BibTeX.
-
-If you have an \href{https://www.overleaf.com/user/subscription/plans}{upgraded account}, you can also import your Mendeley or Zotero library directly as a \verb|.bib| file, via the upload menu in the file-tree.
-
-\subsection{Good luck!}
 \section{Database Diagram}
+\subsection{Proposed Diagram}
+\subsection{Evaluation 1 Diagram}
+\subsection{Evaluation 2 Diagram}
+\subsection{Final Diagram}
 \section{Contribution}
+{\large\textbf{Contribution by Janak Mallik}}
+\\ID : 19 02 04 106
+\begin{description}
+    \item[\hspace{7mm}- Product Related :] 1. All product data control (add new, update, delete), 2. Product Related front-end.
+    \item[\hspace{7mm}- Cart Related :] 1. To add new products to cart by customers at front-end and saves at back-end.
+    \item[\hspace{7mm}- Order Related :] 1. All Order data control in back-end, 2. Order Related customer front-end and admin front-end.
+    \item[\hspace{7mm}- Customer Related :] 1. All Customer data control, 2. Customer login, registration and profile data update, 3. Customer data for admin front-end and back-end.
+\end{description}
+
+\vspace{5mm}
+{\large\textbf{Contribution by Aninda Mazumder}}
+\\ID : 19 02 04 100
+\begin{description}
+    \item[\hspace{7mm}- Author Related :] 1. All Author data control in back-end and admin front-end.
+    \item[\hspace{7mm}- Check Out Related :] 1. Check Out for customer to confirm purchase.
+    \item[\hspace{7mm}- Wish-list Related :] 1. Wish-list for customer front-end to add desired books to list.
+    \item[\hspace{7mm}- Search Related :] 1. Search out the books for customers front-end.
+\end{description}
+
+
 \section{Conclusion}
 \subsection{Conclusion}
+Our project aims to create an online store that provides customers with the option to purchase both physical books and e-books. The goal is to offer a convenient and accessible platform for customers to browse and purchase their desired books in either format. This will help eliminate the need for customers to visit multiple stores or websites to find the books they want, and streamline the purchasing process by offering both formats in one place.
 \subsection{Limitations}
 Overall limitations we have faced while working on the project.
 \begin{description}
-    \item[- Time and Resources :] Developing a properly functional and user-friendly online book store require more time and significant resources.
-    \item[- Technical Expertise :] Developing an online book store requires technical expertise in website development, e-commerce platforms, payment gateways, and security measures. Lack of technical expertise can lead us to poorly functioning some of the features of our website.
+    \item[\hspace{7mm}- Time and Resources :] Developing a properly functional and user-friendly online book store require more time and significant resources.
+    \item[\hspace{7mm}- Technical Expertise :] Developing an online book store requires technical expertise in website development, e-commerce platforms, payment gateways, and security measures. Lack of technical expertise can lead us to poorly functioning some of the features of our website.
 \end{description}
 \subsection{Future Work}
 Some possible future work for an online book store could include:
 \begin{description} 
-    \item[- Personalization :] The online book store could use customer data to provide personalized book recommendations, based on their previous purchases or browsing history.
-    \item[- Social Features :] The online book store could include social features such as user reviews, book clubs, and author interviews to engage customers and create a sense of community.
-    \item[- Subscription Model :] The online book store could implement a subscription model, where customers pay a monthly fee to access a certain number of E-books or receive discounts on their purchases.
-    \item[- E-book Formats :] E-books in different formats must will be implemented and ensured compatibility with different e-readers and devices.
+    \item[\hspace{7mm}- Personalization :] The online book store could use customer data to provide personalized book recommendations, based on their previous purchases or browsing history.
+    \item[\hspace{7mm}- Social Features :] The online book store could include social features such as user reviews, book clubs, and author interviews to engage customers and create a sense of community.
+    \item[\hspace{7mm}- Subscription Model :] The online book store could implement a subscription model, where customers pay a monthly fee to access a certain number of E-books or receive discounts on their purchases.
+    \item[\hspace{7mm}- E-book Formats :] E-books in different formats must will be implemented and ensured compatibility with different e-readers and devices.
 \end{description}
 \subsection{Project Link}
 \subsection{Ending Remarks}
+By providing customers with the option to purchase e-books, we hope to encourage the adoption of digital formats, which can contribute to a more sustainable future by reducing the consumption of paper and the carbon footprint associated with shipping physical books. However, we also recognize that many customers still prefer physical books and we aim to provide them with the option to purchase those as well.
 
-We hope you find Overleaf useful, and do take a look at our \href{https://www.overleaf.com/learn}{help library} for more tutorials and user guides! Please also let us know if you have any feedback using the Contact Us link at the bottom of the Overleaf menu --- or use the contact form at \url{https://www.overleaf.com/contact}.
-
-\bibliographystyle{alpha}
-\bibliography{sample}
-
+Overall, our online store project aims to provide a comprehensive and convenient solution for customers looking to purchase books in either physical or digital formats, while also contributing to a more sustainable future.
 \end{document}
