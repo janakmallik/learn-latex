@@ -4,16 +4,24 @@
 % Language setting
 % Replace `english' with e.g. `spanish' to change the document language
 \usepackage[english]{babel}
+\usepackage[dvipsnames]{xcolor}
 
 % Set page size and margins
 % Replace `letterpaper' with `a4paper' for UK/EU standard size
 \usepackage[letterpaper,top=1.5cm,bottom=2cm,left=1.5cm,right=1.5cm,marginparwidth=1.75cm]{geometry}
 
+\usepackage{comment} % load the comment package
+\begin{comment}
 \usepackage{xcolor}
 \pagecolor{black} % sets the background color of the page
-\color{white} % sets the text color of the document
+\color{white} % sets the text color of the document  
+\end{comment}
+
+
+
 
 % Useful packages
+\usepackage{float}
 \usepackage{array}
 \usepackage[en-GB]{datetime2}
 %\DTMlangsetup[en-GB]{ord=raise}
@@ -56,7 +64,7 @@
         {\large	CSE 3200: Software Development-V}
         \vspace{5mm}
         
-        {\large Fall 2021}
+        {\large Spring 2022}
 
         \vspace{7mm}
         {\large Project Final Report}
@@ -91,8 +99,9 @@
 \end{tabular}}
 \vspace{1cm}
         
-{\large \today} 
-
+%\date{February 26, 2023}
+\DTMdate{2023-02-26}
+%{\large \today}
         
     \end{center}
 \end{titlepage}
@@ -172,11 +181,42 @@ Thought we have proposed to add e-book facility. Due to lack of time and resourc
 \begin{description}
     \item[\hspace{7mm}- E-book version :] Our book store should have offer e-books in different formats, such as PDF, EPUB, and MOBI, to ensure compatibility with different e-readers and devices.
 \end{description}
+\newpage
 \section{Database Diagram}
+
+
 \subsection{Proposed Diagram}
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=12cm,angle=90]{database_diagram.png}
+  \caption{Proposed Database Diagram for EbookCafe.com}
+  %\label{fig:example}
+\end{figure}
+\newpage
 \subsection{Evaluation 1 Diagram}
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=12cm,angle=90]{database_diagram.png}
+  \caption{Evaluation 1 Database Diagram for EbookCafe.com}
+  %\label{fig:example}
+\end{figure}
+\newpage
 \subsection{Evaluation 2 Diagram}
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=12cm,angle=90]{database_diagram.png}
+  \caption{Evaluation 2 Database Diagram for EbookCafe.com}
+  %\label{fig:example}
+\end{figure}
+\newpage
 \subsection{Final Diagram}
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=12cm,angle=90]{database_diagram.png}
+  \caption{Final Database Diagram for EbookCafe.com}
+  %\label{fig:example}
+\end{figure}
+\newpage
 \section{Contribution}
 {\large\textbf{Contribution by Janak Mallik}}
 \\ID : 19 02 04 106
@@ -216,13 +256,16 @@ Some possible future work for an online book store could include:
     \item[\hspace{7mm}- E-book Formats :] E-books in different formats must will be implemented and ensured compatibility with different e-readers and devices.
 \end{description}
 \subsection{Project Link}
+The entire project was merged after individuals contribution and then the entire project uploaded to the main branch of \href{https://github.com/janakmallik/EbookCafe-site-online-store-project}{EbookCafe-site-online-store-project} repository.
+
+GitHub link for our project - \href{https://github.com/janakmallik/EbookCafe-site-online-store-project}{https://github.com/janakmallik/EbookCafe-site-online-store-project}
 \subsection{Ending Remarks}
 By providing customers with the option to purchase e-books, we hope to encourage the adoption of digital formats, which can contribute to a more sustainable future by reducing the consumption of paper and the carbon footprint associated with shipping physical books. However, we also recognize that many customers still prefer physical books and we aim to provide them with the option to purchase those as well.
 
 Overall, our online store project aims to provide a comprehensive and convenient solution for customers looking to purchase books in either physical or digital formats, while also contributing to a more sustainable future.
 
 \vspace{2cm}
-latex file link for this document - \href{https://github.com/janakmallik/learn-latex/blob/main/ebookcafe.tex}{https://github.com/janakmallik/learn-latex/blob/main/ebookcafe.tex}
+latex file link for this document - \href{https://github.com/janakmallik/learn-latex/tree/main/ebookcafe}{https://github.com/janakmallik/learn-latex/tree/main/ebookcafe}
 
 \end{document}
 
